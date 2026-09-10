@@ -16,15 +16,12 @@ pipeline{
             }
         }
         post{
-            stage('success'){
-                steps{
+           success{
                     echo 'pipeline completed successfully'
                 }
-            }
-            stage('Failure'){
-                steps{
+            
+          failure{
                     echo 'pipeline failed, check the logs'
                 }
-            }
         }
 }
